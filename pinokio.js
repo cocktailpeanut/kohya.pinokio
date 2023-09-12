@@ -6,7 +6,7 @@ const exists = (filepath) => {
 }
 module.exports = {
   title: "kohya_ss",
-  description: "1 Click Installer for kohya_ss, a Stable Diffusion Trainer (https://github.com/bmaltais/kohya_ss)",
+  description: "1 Click Installer for kohya_ss, a Stable Diffusion LoRa & Dreambooth WebUI (https://github.com/bmaltais/kohya_ss)",
   icon: "icon.png",
   menu: async (kernel) => {
     let installed = await exists(path.resolve(__dirname, "kohya_ss", "venv"))
