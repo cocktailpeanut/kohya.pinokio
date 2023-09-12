@@ -1,0 +1,39 @@
+{
+  "run": [{
+    "method": "shell.start",
+    "params": {
+      "path": "kohya_ss",
+      "env": {
+        "HF_HOME": "./huggingface",
+        "ACCELERATE_USE_MPS_DEVICE": "True"
+      }
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "env",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'gui.bat' : 'bash gui.sh'}} --listen 127.0.0.1 --inbrowser",
+      "on": [{
+        "event": "/(http:\/\/[0-9.:]+)/",
+        "return": "{{event.matches[0][1]}}"
+      }]
+    }
+  }, {
+    "method": "self.set",
+    "params": {
+      "session.json": {
+        "url": "{{input}}"
+      }
+    }
+  }, {
+    "method": "process.wait" 
+  }]
+}

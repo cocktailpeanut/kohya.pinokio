@@ -1,0 +1,28 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "git clone https://github.com/cocktailpeanut/kohya_ss.git"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'setup.bat --torch2' : 'bash setup.sh'}}",
+      "path": "kohya_ss",
+      "env": {
+        "HF_HOME": "./huggingface"
+      }
+    }
+  }, {
+    "method": "input",
+    "params": {
+      "title": "Install Success",
+      "description": "Go back to the dashboard and launch the app!"
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "/?selected=kohya_ss"
+    }
+  }]
+}
