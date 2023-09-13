@@ -1,0 +1,20 @@
+{
+  "run": [{
+    "method": "fs.download",
+    "params": {
+      "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors",
+      "path": "models/Stable-diffusion/sd_xl_base_1.0.safetensors"
+    }
+  }, {
+    "method": "input",
+    "params": {
+      "title": "Model Downloaded!",
+      "description": "The model file stored under the 'models' folder."
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "/?selected=kohya_ss"
+    }
+  }]
+}
