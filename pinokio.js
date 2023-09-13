@@ -31,8 +31,7 @@ module.exports = {
         on: "<i class='fa-solid fa-desktop'></i> Server",
         href: "start.json?fullscreen=true"
       }, {
-        when: "sdxl.json",
-        on: "<i class='fa-solid fa-cloud-arrow-down'></i> Download SDXL Model",
+        html: "<i class='fa-solid fa-cloud-arrow-down'></i> Download SDXL Model",
         href: "sdxl.json?fullscreen=true"
       }]
     } else {
