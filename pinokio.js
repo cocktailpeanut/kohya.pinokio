@@ -32,7 +32,7 @@ module.exports = {
         href: "start.json?fullscreen=true"
       }, {
         html: "<i class='fa-solid fa-cloud-arrow-down'></i> Download SDXL Model",
-        href: "sdxl.json?fullscreen=true"
+        href: "sdxl.json?fullscreen=true&run=true"
       }]
     } else {
       return [{
