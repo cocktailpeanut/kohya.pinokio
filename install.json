@@ -1,4 +1,8 @@
 {
+  "requires": [{
+    "platform": "darwin",
+    "name": "brew"
+  }],
   "run": [{
     "method": "shell.run",
     "params": {
